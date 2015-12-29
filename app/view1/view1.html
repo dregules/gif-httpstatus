@@ -1,1 +1,5 @@
-<p>This is the partial for view 1.</p>
+<form>
+  <input type="text" class="input_box" ng-model="search.code" placeholder="e.g. 404,405...">
+  <button class="btn btn-success" type="submit" ng-click="findError()">Find error</button>
+</form>
+<p ng-repeat="error in errors | filter:search">{{error.description}}</p>

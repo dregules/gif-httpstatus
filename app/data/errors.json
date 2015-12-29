@@ -1,0 +1,12 @@
+[
+  {
+    "code": 404,
+    "description": "Blah Blah blah",
+    "moreURL": "a website with more info"
+  },
+  {
+    "code": 405,
+    "description": "Blah Blah blah",
+    "moreURL": "a website with more info"
+  }
+]
