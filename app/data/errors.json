@@ -1,12 +1,383 @@
 [
   {
-    "code": 404,
-    "description": "Blah Blah blah",
-    "moreURL": "a website with more info"
+    "code": 100,
+    "description": "This interim response indicates that everything so far is OK and that the client should continue with the request or ignore it if it is already finished.",
+    "IETFSectionReference":  6.1.1,
+    "text": "" "Continue",
+    "category": "Informational Response"
   },
   {
-    "code": 405,
-    "description": "Blah Blah blah",
-    "moreURL": "a website with more info"
-  }
+    "code": 101,
+    "description": "This code is sent in response to an Upgrade: request header by the client, and indicates that the protocol the server is switching too. It was introduced to allow migration to an incompatible protocol version, and is not in common use.",
+    "reference": 6.2.2,
+    "text": "" "Switching Protocol",
+    "category": "Informational Response"
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+  {
+    "code": ,
+    "description": "",
+    "reference": "",
+    "text": "",
+    "category": ""
+  },
+
+
+
 ]

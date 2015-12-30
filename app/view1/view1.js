@@ -22,9 +22,7 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.getRandomGif = function(){
     $http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=american+psycho')
       .success(function(response) {
-        console.log(response);
         $scope.randomGiphy = response.data.image_original_url;
-        console.log($scope.randomGiphy);
       });
   };
 
