@@ -2,5 +2,10 @@
   <input type="text" class="input_box" ng-model="search.code" placeholder="e.g. 404,405...">
   <button class="btn btn-success" type="submit" ng-click="findError()">Find error</button>
 </form>
-<p ng-repeat="error in errors | filter:search">{{error.description}}</p>
+<div ng-repeat="error in errors | filter:search">
+  <h2 class="statusCategory">{{error.category}}</h2>
+  <h2>{{error.code}} - {{error.text}}</h2>
+  <p>{{error.description}}</p>
+</div>
+
 <img src={{randomGiphy}} alt="">
