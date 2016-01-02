@@ -14,10 +14,10 @@
     "category": "Informational Response"
   },
   {
-    "code": "" ,
-    "description": "",
+    "code": 200,
+    "description": "The request has succeeded. The meaning of a success varies depending on the HTTP method: GET: The resource has been fetched and is transmitted in the message body. HEAD: The entity headers are in the message body. POST: The resource describing the result of the action is transmitted in the message body. TRACE: The message body contains the request message as received by the server",
     "reference": "",
-    "text": "",
+    "text": "OK",
     "category": ""
   },
   {

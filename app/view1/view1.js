@@ -16,16 +16,8 @@ angular.module('myApp.view1', ['ngRoute'])
 
 
 
-.controller('View1Ctrl', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
+.controller('View1Ctrl', ['$scope', '$http', function($scope, $http){
   $scope.statusSearch = {};
-  $scope.findError = function(){
-    $http.get('/app/data/statusHttp.json')
-      .success(function(response) {
-        $scope.errors = response;
-        console.log("Heres the 'params': " , $scope.statusSearch);
-        $scope.getRandomGif();
-      });
-  };
   var statusMap = {
     '1xx': {
       gifTag: "american+psycho",
@@ -48,10 +40,17 @@ angular.module('myApp.view1', ['ngRoute'])
       category: "Server Error Response"
     }
   };
-  $scope.getRandomGif = function(){
-    $http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=shit')
+  $scope.findStatus = function(){
+    $http.get('/app/data/statusHttp.json')
       .success(function(response) {
-        console.log(response.data);
+        $scope.errors = response;
+        // console.log("Heres the 'params': " , $scope.statusSearch.code[0], 'xx');
+        $scope.getRandomGif();
+      });
+  };
+  $scope.getRandomGif = function(){
+    $http.get('http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=' + statusMap[$scope.statusSearch.code[0] + 'xx'].gifTag)
+      .success(function(response) {
         $scope.randomGiphy = response.data.image_original_url;
       });
   };
