@@ -48,7 +48,8 @@ angular.module('myApp.view1', ['ngRoute'])
           }
         }
         $scope.statuses = response;
-        $scope.statusSearch.description = filterByCode($scope.statusSearch.code).description.join('\n');
+        console.log($scope.statuses)
+        $scope.statusSearch.description = "<p>" + filterByCode($scope.statusSearch.code).description.join("</p><p>") + "</p>";
         console.log("Joined Descr:", $scope.statusSearch.description);
         $scope.statusCategory = statusMap[$scope.statusSearch.code[0] + 'xx'].category;
         $scope.getRandomGif();
