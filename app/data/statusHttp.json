@@ -24,360 +24,416 @@
                     "POST: The resource describing the result of the action is transmitted in the message body.",
                     "TRACE: The message body contains the request message as received by the server"
                   ],
-    "reference": "",
+    "reference": "6.3.1",
     "text": "OK"
   },
   {
-    "code": "" ,
-    "description": "",
+    "code": 201,
+    "description": [
+      "Created	The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a PUT request."
+    ],
+    "reference": "6.3.2",
+    "text": "Created"
+  },
+  {
+    "code": 202,
+    "description": [
+      "The request has been received but not yet acted upon. It is non-committal, meaning that there is no way in HTTP to later send an asynchronous response indicating the outcome of processing the request.",
+      "It is intended for cases where another process or server handles the request, or for batch processing."
+    ],
+    "reference": "6.3.3",
+    "text": "Accepted"
+  },
+  {
+    "code": 203,
+    "description":[
+      "This response code means returned meta-information set is not exact set as available from the origin server, but collected from a local or a third party copy. Except this condition, 200 OK response should be preferred instead of this response."
+    ],
+    "reference": "6.3.4",
+    "text": "Non-Authoritative Information"
+  },
+  {
+    "code": 204,
+    "description": [
+      "There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
+    ],
+    "reference": "6.3.5",
+    "text": "No Content"
+  },
+  {
+    "code": 205,
+    "description": [
+      "This response code is sent after accomplishing request to tell user agent reset document view which sent this request."
+    ],
+    "reference": "6.3.6",
+    "text": "Reset Content"
+  },
+  {
+    "code": 206,
+    "description": [
+      "This response code is used because of range header sent by the client to separate download into multiple streams."
+    ],
+    "reference": "6.3.6",
+    "text": "Partial Content"
+  },
+  {
+    "code": 300,
+    "description": [
+      "The request has more than one possible responses. User-agent or user should choose one of them. There is no standardized way to choose one of the responses."
+    ],
+    "reference": "6.4.1",
+    "text": "Multiple Choice"
+  },
+  {
+    "code": 301,
+    "description": [
+      "This response code means that URI of requested resource has been changed. Probably, new URI would be given in the response."
+    ],
+    "reference": "6.4.2",
+    "text": "Moved Permanently"
+  },
+  {
+    "code": 302,
+    "description": [
+      "This response code means that URI of requested resource has been changed temporarily. New changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests."
+    ],
+    "reference": "6.4.3",
+    "text": "Found"
+  },
+  {
+    "code": 303,
+    "description": [
+      "Server sent this response to directing client to get requested resource to another URI with an GET request."
+      ],
+    "reference": "6.4.4",
+    "text": "See Other"
+  },
+  {
+    "code": 304,
+    "description": [
+      "This is used for caching purposes. It is telling to client that response has not been modified. So, client can continue to use same cached version of response."
+    ],
+    "reference": "6.4.5",
+    "text": "Not Modified"
+
+  },
+  {
+    "code": 305,
+    "description": [
+      "This means requested response must be accessed by a proxy. This response code is not largely supported because security reasons."
+    ],
+    "reference": "6.4.6",
+    "text": "Use Proxy"
+
+  },
+  {
+    "code": 306,
+    "description": [
+      "This response code is no longer used, it is just reserved currently. It was used in a previous version of the HTTP 1.1 specification."
+    ],
+    "reference": "6.4.6",
+    "text": "unused"
+
+  },
+  {
+    "code": 307,
+    "description": [
+      "Server sent this response to directing client to get requested resource to another URI with same method that used prior request. This has the same semantic than the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the second request."
+    ],
+    "reference": "6.4.7",
+    "text": "Temporary Redirect"
+
+  },
+  {
+    "code": 308,
+    "description": [
+      "This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the second request.",
+      "This is an experimental response code whose specification is currently in draft form"
+    ],
+    "reference": "6.4.7",
+    "text": "Permanent Redirect"
+
+  },
+  {
+    "code": 400 ,
+    "description": [
+      "This response means that server could not understand the request due to invalid syntax."
+    ],
+    "reference": "",
+    "text": "Bad Request"
+
+  },
+  {
+    "code": 401 ,
+    "description": [
+      "Authentication is needed to get requested response. This is similar to 403, but in this case, authentication is possible."
+    ],
+    "reference": "",
+    "text": "Unauthorized"
+
+  },
+  {
+    "code": 402 ,
+    "description": [
+      "This response code is reserved for future use. Initial aim for creating this code was using it for digital payment systems however this is not used currently."
+    ],
+    "reference": "",
+    "text": "Payment Required"
+
+  },
+  {
+    "code": 403 ,
+    "description": [
+      "Client does not have access rights to the content so server is rejecting to give proper response"
+    ],
+    "reference": "",
+    "text": "Forbidden"
+
+  },
+  {
+    "code": 404 ,
+    "description": [
+      "Server can not find requested resource. This response code probably is most famous one due to its frequency to occur in web."
+    ],
+    "reference": "",
+    "text": "Not Found"
+
+  },
+  {
+    "code": 405 ,
+    "description": [
+      "The request method is known by the server but has been disabled and cannot be used. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code."
+    ],
+    "reference": "",
+    "text": "Method Not Allowed"
+
+  },
+  {
+    "code": 406,
+    "description": [
+      "This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content following the criteria given by the user agent"
+    ],
+    "reference": "",
+    "text": "Not Acceptable"
+
+  },
+  {
+    "code": 407,
+    "description": [
+      "This is similar to 401 but authentication is needed to be done by a proxy."
+    ],
+    "reference": "",
+    "text": "Proxy Authentication Required"
+
+  },
+  {
+    "code": 408,
+    "description": [
+      "This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome or IE9, use HTTP preconnection mechanisms to speed up surfing (see bug 881804, which tracks the future implementation of such a mechanism in Firefox). Also note that some servers merely shut down the connection without sending this message."
+    ],
+    "reference": "",
+    "text": "Request Timeout"
+
+  },
+  {
+    "code": 409,
+    "description": [
+      "This response would be sent when a request conflict with current state of server."
+    ],
+    "reference": "",
+    "text": "Conflict"
+  },
+  {
+    "code": 410,
+    "description": [
+      "This response would be sent when requested content has been deleted from server."
+    ],
+    "reference": "",
+    "text": "Gone"
+
+  },
+  {
+    "code": 411,
+    "description": [
+      ""
+    ],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 412,
+    "description": [
+      ""
+    ],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 413,
+    "description": [
+      ""
+    ],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 414,
+    "description": [
+      ""
+    ],
     "reference": "",
     "text": ""
   },
   {
-    "code": "" ,
-    "description": "",
+    "code": 415,
+    "description": [
+      ""
+    ],
     "reference": "",
     "text": ""
   },
   {
-    "code": "" ,
-    "description": "",
+    "code": 416,
+    "description": [
+      ""
+    ],
+    "reference": "",
+    "text": ""
+  },
+  {
+    "code": 417,
+    "description": [
+      ""
+    ],
+    "reference": "",
+    "text": ""
+  },
+  {
+    "code": 418,
+    "description": [
+      ""
+    ],
+    "reference": "",
+    "text": ""
+  },
+  {
+    "code": 421,
+    "description": [""],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 426,
+    "description": [""],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 428 ,
+    "description": [""],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 429,
+    "description": [""],
+    "reference": "",
+    "text": ""
+
+  },
+  {
+    "code": 431,
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 
   },
   {
     "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
-    "reference": "",
-    "text": ""
-
-  },
-  {
-    "code": "" ,
-    "description": "",
+    "description": [""],
     "reference": "",
     "text": ""
 

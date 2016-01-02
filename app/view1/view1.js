@@ -42,15 +42,12 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.findStatus = function(){
     $http.get('/app/data/statusHttp.json')
       .success(function(response) {
-        function filterByCode(code) {
-          for(var status in response) {
-            if(response[status].code === parseInt(code)) { return response[status]; }
-          }
-        }
+        // function filterByCode(code) {
+        //   for(var status in response) {
+        //     if(response[status].code === parseInt(code)) { return response[status]; }
+        //   }
+        // }
         $scope.statuses = response;
-        console.log($scope.statuses)
-        $scope.statusSearch.description = "<p>" + filterByCode($scope.statusSearch.code).description.join("</p><p>") + "</p>";
-        console.log("Joined Descr:", $scope.statusSearch.description);
         $scope.statusCategory = statusMap[$scope.statusSearch.code[0] + 'xx'].category;
         $scope.getRandomGif();
       });
