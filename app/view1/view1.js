@@ -14,8 +14,6 @@ angular.module('myApp.view1', ['ngRoute'])
     });
 }])
 
-
-
 .controller('View1Ctrl', ['$scope', '$http', function($scope, $http){
   $scope.statusSearch = {};
   var statusMap = {
@@ -40,11 +38,19 @@ angular.module('myApp.view1', ['ngRoute'])
       category: "Server Error Response"
     }
   };
+
   $scope.findStatus = function(){
     $http.get('/app/data/statusHttp.json')
       .success(function(response) {
-        $scope.errors = response;
-        // console.log("Heres the 'params': " , $scope.statusSearch.code[0], 'xx');
+        function filterByCode(code) {
+          for(var status in response) {
+            if(response[status].code === parseInt(code)) { return response[status]; }
+          }
+        }
+        $scope.statuses = response;
+        $scope.statusSearch.description = filterByCode($scope.statusSearch.code).description.join('\n');
+        console.log("Joined Descr:", $scope.statusSearch.description);
+        $scope.statusCategory = statusMap[$scope.statusSearch.code[0] + 'xx'].category;
         $scope.getRandomGif();
       });
   };

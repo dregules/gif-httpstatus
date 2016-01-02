@@ -2,9 +2,9 @@
   <input type="text" name="status" class="input_box" ng-model="statusSearch.code" placeholder="e.g. 404,200...">
   <input class="btn btn-success" type="submit" value="Find Error" ng-click="findStatus()"></input>
 </form>
-<div ng-repeat="error in errors | filter:statusSearch">
-  <h2 class="statusCategory">{{error.category}}</h2>
-  <h2>{{error.code}} - {{error.text}}</h2>
-  <p>{{error.description}} Further reading found  <a href="http://tools.ietf.org/html/rfc7231#section-{{error.reference}}">here</a></p>
-</div>
+<h2 class="statusCategory">{{statusCategory}}</h2>
 <img src={{randomGiphy}} alt="">
+<div ng-repeat="status in statuses | filter:statusSearch">
+  <h2>{{status.code}} - {{status.text}}</h2>
+</div>
+<p>{{statusSearch.description}} Further reading found  <a href="http://tools.ietf.org/html/rfc7231#section-{{status.reference}}">here</a></p>
