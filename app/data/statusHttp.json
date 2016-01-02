@@ -2,7 +2,7 @@
   {
     "code": 100,
     "description": "This interim response indicates that everything so far is OK and that the client should continue with the request or ignore it if it is already finished.",
-    "IETFSectionReference":  "6.1.1",
+    "reference":  "6.2.1",
     "text": "Continue",
     "category": "Informational Response"
   },
