@@ -4,7 +4,7 @@
     "description": [
       "This interim response indicates that everything so far is OK and that the client should continue with the request or ignore it if it is already finished."
     ],
-    "reference":  "6.2.1",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.2.1",
     "text": "Continue"
   },
   {
@@ -12,7 +12,7 @@
     "description": [
       "This code is sent in response to an Upgrade: request header by the client, and indicates that the protocol the server is switching too. It was introduced to allow migration to an incompatible protocol version, and is not in common use."
     ],
-    "reference": "6.2.2",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.2.2",
     "text": "Switching Protocol"
   },
   {
@@ -24,15 +24,15 @@
                     "POST: The resource describing the result of the action is transmitted in the message body.",
                     "TRACE: The message body contains the request message as received by the server"
                   ],
-    "reference": "6.3.1",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.3.1",
     "text": "OK"
   },
   {
     "code": 201,
     "description": [
-      "Created	The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a PUT request."
+      "The request has succeeded and a new resource has been created as a result of it. This is typically the response sent after a PUT request."
     ],
-    "reference": "6.3.2",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.3.2",
     "text": "Created"
   },
   {
@@ -41,7 +41,7 @@
       "The request has been received but not yet acted upon. It is non-committal, meaning that there is no way in HTTP to later send an asynchronous response indicating the outcome of processing the request.",
       "It is intended for cases where another process or server handles the request, or for batch processing."
     ],
-    "reference": "6.3.3",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.3.3",
     "text": "Accepted"
   },
   {
@@ -49,7 +49,7 @@
     "description":[
       "This response code means returned meta-information set is not exact set as available from the origin server, but collected from a local or a third party copy. Except this condition, 200 OK response should be preferred instead of this response."
     ],
-    "reference": "6.3.4",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.3.4",
     "text": "Non-Authoritative Information"
   },
   {
@@ -57,7 +57,7 @@
     "description": [
       "There is no content to send for this request, but the headers may be useful. The user-agent may update its cached headers for this resource with the new ones."
     ],
-    "reference": "6.3.5",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.3.5",
     "text": "No Content"
   },
   {
@@ -65,7 +65,7 @@
     "description": [
       "This response code is sent after accomplishing request to tell user agent reset document view which sent this request."
     ],
-    "reference": "6.3.6",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.3.6",
     "text": "Reset Content"
   },
   {
@@ -73,7 +73,7 @@
     "description": [
       "This response code is used because of range header sent by the client to separate download into multiple streams."
     ],
-    "reference": "6.3.6",
+    "URLreference": "http://tools.ietf.org/html/rfc7233#section-4.1",
     "text": "Partial Content"
   },
   {
@@ -81,7 +81,7 @@
     "description": [
       "The request has more than one possible responses. User-agent or user should choose one of them. There is no standardized way to choose one of the responses."
     ],
-    "reference": "6.4.1",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.1",
     "text": "Multiple Choice"
   },
   {
@@ -89,7 +89,7 @@
     "description": [
       "This response code means that URI of requested resource has been changed. Probably, new URI would be given in the response."
     ],
-    "reference": "6.4.2",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.2",
     "text": "Moved Permanently"
   },
   {
@@ -97,7 +97,7 @@
     "description": [
       "This response code means that URI of requested resource has been changed temporarily. New changes in the URI might be made in the future. Therefore, this same URI should be used by the client in future requests."
     ],
-    "reference": "6.4.3",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.3",
     "text": "Found"
   },
   {
@@ -105,7 +105,7 @@
     "description": [
       "Server sent this response to directing client to get requested resource to another URI with an GET request."
       ],
-    "reference": "6.4.4",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.4",
     "text": "See Other"
   },
   {
@@ -113,7 +113,7 @@
     "description": [
       "This is used for caching purposes. It is telling to client that response has not been modified. So, client can continue to use same cached version of response."
     ],
-    "reference": "6.4.5",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.5",
     "text": "Not Modified"
 
   },
@@ -122,7 +122,7 @@
     "description": [
       "This means requested response must be accessed by a proxy. This response code is not largely supported because security reasons."
     ],
-    "reference": "6.4.6",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.6",
     "text": "Use Proxy"
 
   },
@@ -131,7 +131,7 @@
     "description": [
       "This response code is no longer used, it is just reserved currently. It was used in a previous version of the HTTP 1.1 specification."
     ],
-    "reference": "6.4.6",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.6",
     "text": "unused"
 
   },
@@ -140,7 +140,7 @@
     "description": [
       "Server sent this response to directing client to get requested resource to another URI with same method that used prior request. This has the same semantic than the 302 Found HTTP response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the second request."
     ],
-    "reference": "6.4.7",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.7",
     "text": "Temporary Redirect"
 
   },
@@ -150,16 +150,16 @@
       "This means that the resource is now permanently located at another URI, specified by the Location: HTTP Response header. This has the same semantics as the 301 Moved Permanently HTTP response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the second request.",
       "This is an experimental response code whose specification is currently in draft form"
     ],
-    "reference": "6.4.7",
+    "URLreference": "http://greenbytes.de/tech/webdav/#draft-reschke-http-status-308",
     "text": "Permanent Redirect"
 
   },
   {
-    "code": 400 ,
+    "code": 400,
     "description": [
       "This response means that server could not understand the request due to invalid syntax."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.1",
     "text": "Bad Request"
 
   },
@@ -168,52 +168,47 @@
     "description": [
       "Authentication is needed to get requested response. This is similar to 403, but in this case, authentication is possible."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7235#section-3.1",
     "text": "Unauthorized"
-
   },
   {
     "code": 402 ,
     "description": [
       "This response code is reserved for future use. Initial aim for creating this code was using it for digital payment systems however this is not used currently."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.2",
     "text": "Payment Required"
-
   },
   {
     "code": 403 ,
     "description": [
       "Client does not have access rights to the content so server is rejecting to give proper response"
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.3",
     "text": "Forbidden"
-
   },
   {
     "code": 404 ,
     "description": [
       "Server can not find requested resource. This response code probably is most famous one due to its frequency to occur in web."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.4",
     "text": "Not Found"
-
   },
   {
     "code": 405 ,
     "description": [
       "The request method is known by the server but has been disabled and cannot be used. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.5",
     "text": "Method Not Allowed"
-
   },
   {
     "code": 406,
     "description": [
       "This response is sent when the web server, after performing server-driven content negotiation, doesn't find any content following the criteria given by the user agent"
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.6",
     "text": "Not Acceptable"
 
   },
@@ -222,7 +217,7 @@
     "description": [
       "This is similar to 401 but authentication is needed to be done by a proxy."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7235#section-3.2",
     "text": "Proxy Authentication Required"
 
   },
@@ -231,7 +226,7 @@
     "description": [
       "This response is sent on an idle connection by some servers, even without any previous request by the client. It means that the server would like to shut down this unused connection. This response is used much more since some browsers, like Chrome or IE9, use HTTP preconnection mechanisms to speed up surfing (see bug 881804, which tracks the future implementation of such a mechanism in Firefox). Also note that some servers merely shut down the connection without sending this message."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.7",
     "text": "Request Timeout"
 
   },
@@ -240,7 +235,7 @@
     "description": [
       "This response would be sent when a request conflict with current state of server."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.8",
     "text": "Conflict"
   },
   {
@@ -248,195 +243,224 @@
     "description": [
       "This response would be sent when requested content has been deleted from server."
     ],
-    "reference": "",
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.9",
     "text": "Gone"
 
   },
   {
     "code": 411,
     "description": [
-      ""
+      "Server rejected the request because the Content-Length header field is not defined and the server requires it."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.10",
+    "text": "Length Required"
 
   },
   {
     "code": 412,
     "description": [
-      ""
+      "The client has indicated preconditions in its headers which the server does not meet."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7232#section-4.2",
+    "text": "Precondition Failed"
 
   },
   {
     "code": 413,
     "description": [
-      ""
+      "Request entity is larger than limits defined by server; the server might close the connection or return an Retry-After header field."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.11",
+    "text": "Payload Too Large"
 
   },
   {
     "code": 414,
     "description": [
-      ""
+      "The URI requested by the client is longer than the server is willing to interpret."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.12",
+    "text": "URI Too Long"
   },
   {
     "code": 415,
     "description": [
-      ""
+      "The media format of the requested data is not supported by the server, so the server is rejecting the request."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.13",
+    "text": "Unsupported Media Type"
   },
   {
     "code": 416,
     "description": [
-      ""
+      "The range specified by the Range header field in the request can't be fulfilled; it's possible that the range is outside the size of the target URI's data."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7233#section-4.4",
+    "text": "Requested Range Not Satisfiable"
   },
   {
     "code": 417,
     "description": [
-      ""
+      "This response code means the expectation indicated by the Expect request header field can't be met by the server."
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.14",
+    "text": "Expectation Failed"
   },
   {
     "code": 418,
     "description": [
-      ""
+      "Any attempt to brew coffee with a teapot should result in the error code '418 I'm a teapot'. The resulting entity body MAY be short and stout"
     ],
-    "reference": "",
-    "text": ""
+    "URLreference": "https://tools.ietf.org/html/rfc2324#section-2.3.2",
+    "text": "I'm a teapot"
   },
   {
     "code": 421,
-    "description": [""],
-    "reference": "",
-    "text": ""
+    "description": [
+      "The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7540#section-9.1.2",
+    "text": "Misdirected Request"
 
   },
   {
     "code": 426,
-    "description": [""],
-    "reference": "",
-    "text": ""
+    "description": [
+      "The server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol. The server MUST send an Upgrade header field in a 426 response to indicate the required protocol(s)."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.5.15",
+    "text": "Upgrade Required"
 
   },
   {
     "code": 428 ,
-    "description": [""],
-    "reference": "",
-    "text": ""
+    "description": [
+      "The origin server requires the request to be conditional. Intended to prevent 'the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.'"
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc6585#section-3",
+    "text": "Precondition Required"
 
   },
   {
     "code": 429,
-    "description": [""],
-    "reference": "",
-    "text": ""
+    "description": [
+      "The user has sent too many requests in a given amount of time ('rate limiting')."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc6585#section-4",
+    "text": "Too Many Requests"
 
   },
   {
     "code": 431,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "description": [
+      "The server is unwilling to process the request because its header fields are too large. The request MAY be resubmitted after reducing the size of the request header fields."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc6585#section-5",
+    "text": "Request Header Fields Too Large"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 451,
+    "description": [
+      "   This status code indicates that the server is denying access to the resource as a consequence of a legal demand."
+    ],
+    "URLreference": "https://tools.ietf.org/html/draft-ietf-httpbis-legally-restricted-status-03#section-3",
+    "text": "Unavailable For Legal Reasons"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 499,
+    "description": [
+      "A non-standard status code introduced by nginx for the case when a client closes the connection while nginx is processing the request."
+    ],
+    "URLreference": "http://lxr.nginx.org/source/src/http/ngx_http_request.h#0120",
+    "text": "Client Closed Request"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 500,
+    "description": [
+      "The server has encountered a situation it doesn't know how to handle."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.6.1",
+    "text": "Internal Server Error"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 501,
+    "description": [
+      "The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are GET and HEAD."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.6.2",
+    "text": "Not Implemented"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 502,
+    "description": [
+      "This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.6.3",
+    "text": "Bad Gateway"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 503,
+    "description": [
+      "The server is not ready to handle the request. Common causes are a server that is down for maintenance or that is overloaded. Note that together with this response, a user-friendly page explaining the problem should be sent. This responses should be used for temporary conditions and the Retry-After: HTTP header should, if possible, contain the estimated time before the recovery of the service. The webmaster must also take care about the caching-related headers that are sent along with this response, as these temporary condition responses should usually not be cached."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.6.4",
+    "text": "Service Unavailable"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 504,
+    "description": [
+      "This error response is given when the server is acting as a gateway and cannot get a response in time."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.6.5",
+    "text": "Gateway Timeout"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 505,
+    "description": [
+      "The HTTP version used in the request is not supported by the server."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.6.6",
+    "text": "HTTP Version Not Supported"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 506,
+    "description": [
+      "The server has an internal configuration error: transparent content negotiation for the request results in a circular reference."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc2295#section-8.1",
+    "text": "Variant Also Negotiates"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 507,
+    "description": [
+      "The server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper end point in the negotiation process."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc4918#section-11.5",
+    "text": "Insufficient Storage"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 508,
+    "description": [
+      "The server terminated an operation because it encountered an infinite loop while processing a request with 'Depth: infinity'. This status indicates that the entire operation failed."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc5842#section-7.2",
+    "text": "Loop Detected"
   },
   {
-    "code": "" ,
-    "description": [""],
-    "reference": "",
-    "text": ""
-
+    "code": 510,
+    "description": [
+      "The policy for accessing the resource has not been met in the request. The server should send back all the information necessary for the client to issue an extended request."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc2774#section-7",
+    "text": "Not Extended"
+  },
+  {
+    "code": 511,
+    "description": [
+      "The 511 status code indicates that the client needs to authenticate to gain network access."
+    ],
+    "URLreference": "http://tools.ietf.org/html/rfc6585#section-6",
+    "text": "Network Authentication Required"
   }
 
 ]
