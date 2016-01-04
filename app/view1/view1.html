@@ -4,7 +4,7 @@
 </form>
 <h2 class="statusCategory">{{statusCategory}}</h2>
 <img src={{randomGiphy}} alt="">
-<div ng-repeat="status in statuses | filter:statusSearch.code">
+<div ng-repeat="status in statuses | filter:statusSearch.code | limitTo:1">
   <h2> {{status.code}} - {{status.text}} </h2>
   <div ng-repeat="textBlock in status.description">
     <p>{{textBlock}}</p>

@@ -132,7 +132,7 @@
       "This response code is no longer used, it is just reserved currently. It was used in a previous version of the HTTP 1.1 specification."
     ],
     "URLreference": "http://tools.ietf.org/html/rfc7231#section-6.4.6",
-    "text": "unused"
+    "text": "Unused"
 
   },
   {
@@ -172,7 +172,7 @@
     "text": "Unauthorized"
   },
   {
-    "code": 402 ,
+    "code": 402,
     "description": [
       "This response code is reserved for future use. Initial aim for creating this code was using it for digital payment systems however this is not used currently."
     ],
@@ -180,7 +180,7 @@
     "text": "Payment Required"
   },
   {
-    "code": 403 ,
+    "code": 403,
     "description": [
       "Client does not have access rights to the content so server is rejecting to give proper response"
     ],
@@ -188,7 +188,7 @@
     "text": "Forbidden"
   },
   {
-    "code": 404 ,
+    "code": 404,
     "description": [
       "Server can not find requested resource. This response code probably is most famous one due to its frequency to occur in web."
     ],
@@ -196,7 +196,7 @@
     "text": "Not Found"
   },
   {
-    "code": 405 ,
+    "code": 405,
     "description": [
       "The request method is known by the server but has been disabled and cannot be used. The two mandatory methods, GET and HEAD, must never be disabled and should not return this error code."
     ],
