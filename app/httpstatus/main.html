@@ -1,0 +1,16 @@
+<form>
+  <input type="text" name="status" class="input_box" ng-model="statusSearch.code" placeholder="e.g. 404, 200...">
+  <input class="btn btn-success" type="submit" value="Find Status" ng-click="findStatus()"></input>
+</form>
+<h2 class="statusCategory">{{statusCategory}}</h2>
+<img src={{randomGiphy}} alt="">
+<div class="footer">
+  Powered by <a href="http://api.giphy.com/">Giphy API</a>
+</div>
+<div ng-repeat="status in statuses | filter:statusSearch.code | limitTo:1">
+  <h2> {{status.code}} - {{status.text}} </h2>
+  <div ng-repeat="textBlock in status.description">
+    <p>{{textBlock}}</p>
+  </div>
+  <p>Read <a href="{{status.URLreference}}">IETF reference</a></p>
+</div>

@@ -7,5 +7,8 @@ angular.module('myApp', [
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .otherwise({redirectTo: '/httpstatus'});
+    .when('/',
+      {
+        redirectTo: '/httpstatus'
+      });
 }]);

@@ -5,13 +5,18 @@ angular.module('myApp.httpstatus', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/httpstatus', {
-      templateUrl: 'httpstatus/httpstatus.html',
+      templateUrl: 'httpstatus/main.html',
+      controller: 'httpCtrl'
+    })
+    .when('/httpstatus/:status', {
+      templateUrl: 'httpstatus/statusCode.html',
       controller: 'httpCtrl'
     });
 }])
 
 .controller('httpCtrl', ['$scope', '$http', function($scope, $http){
   $scope.statusSearch = {};
+  $scope.footer = false;
   var statusMap = {
     '1': {
       gifTag: "american+psycho",
