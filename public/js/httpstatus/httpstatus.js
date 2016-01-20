@@ -5,13 +5,13 @@ angular.module('myApp.httpstatus', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/httpstatus', {
-      templateUrl: 'httpstatus/main.html',
-      controller: 'httpCtrl'
-    })
-    .when('/httpstatus/:status', {
-      templateUrl: 'httpstatus/statusCode.html',
+      templateUrl: 'js/httpstatus/main.html',
       controller: 'httpCtrl'
     });
+    // .when('/httpstatus/:status', {
+    //   templateUrl: 'httpstatus/statusCode.html',
+    //   controller: 'httpCtrl'
+    // });
 }])
 
 .controller('httpCtrl', ['$scope', '$http', function($scope, $http){
@@ -41,7 +41,7 @@ angular.module('myApp.httpstatus', ['ngRoute'])
   };
 
   $scope.findStatus = function(){
-    $http.get('/app/data/statusHttp.json')
+    $http.get('/js/data/statusHttp.json')
       .success(function(response) {
         $scope.statuses = response;
         $scope.statusCategory = statusMap[$scope.statusSearch.code[0]].category;
